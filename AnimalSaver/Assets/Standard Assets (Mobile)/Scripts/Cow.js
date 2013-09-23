@@ -1,4 +1,4 @@
-#pragma strict
+﻿#pragma strict
 
 //public var bullet:Transform;
 
@@ -35,19 +35,19 @@ function Update () {
 	var targetPos: Vector3 = transform.position;
 	if (Input.GetKey(UnityEngine.KeyCode.LeftArrow)) {
 	    // change the cow's picture to the left one
-	    GameObject.Find("Cow").guiTexture.texture = Cow_left;
+	    GameObject.Find("Cow_pre").guiTexture.texture = Cow_left;
 		targetPos.x = transform.position.x - 0.02;
     	transform.position = Vector3.Lerp (transform.position, targetPos, Time.deltaTime * 1.0f);  	
 	}
 	else if (Input.GetKey(UnityEngine.KeyCode.RightArrow)) {
 	    // change the cow's picture to the right one
-	    GameObject.Find("Cow").guiTexture.texture = Cow_right;
+	    GameObject.Find("Cow_pre").guiTexture.texture = Cow_right;
 		targetPos.x = transform.position.x + 0.02;
     	transform.position = Vector3.Lerp (transform.position, targetPos, Time.deltaTime * 1.0f);
     }
     else
     {
-    	GameObject.Find("Cow").guiTexture.texture = Cow_down;
+    	GameObject.Find("Cow_pre").guiTexture.texture = Cow_down;
     }
 		
     if (Input.GetKeyDown("space"))

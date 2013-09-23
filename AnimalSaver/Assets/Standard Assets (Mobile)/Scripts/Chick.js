@@ -1,4 +1,4 @@
-#pragma strict
+﻿#pragma strict
 
 public var speedx:float = 20.0f;
 public var speedy:float = 1.0f;
@@ -32,7 +32,7 @@ function Update () {
 	var targetPos: Vector3 = transform.position;
 	if (Input.GetKey(UnityEngine.KeyCode.LeftArrow)) {
 	    // change the Chick's picture to the left one
-	    GameObject.Find("Chick").guiTexture.texture = Chick_left;
+	    GameObject.Find("Chick_pre").guiTexture.texture = Chick_left;
 		targetPos.x = transform.position.x - 0.02;
     	transform.position = Vector3.Lerp (transform.position, targetPos, Time.deltaTime * 1.0f);
     	
@@ -40,13 +40,13 @@ function Update () {
 	}
 	else if (Input.GetKey(UnityEngine.KeyCode.RightArrow)) {
 	    // change the chick's picture to the right one
-	    GameObject.Find("Chick").guiTexture.texture = Chick_right;
+	    GameObject.Find("Chick_pre").guiTexture.texture = Chick_right;
 		targetPos.x = transform.position.x + 0.02;
     	transform.position = Vector3.Lerp (transform.position, targetPos, Time.deltaTime * 1.0f);
     }
     else
     {
-    	GameObject.Find("Chick").guiTexture.texture = Chick_down;
+    	GameObject.Find("Chick_pre").guiTexture.texture = Chick_down;
     }
 		
     if (Input.GetKeyDown("space"))
